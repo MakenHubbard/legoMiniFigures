@@ -17,6 +17,7 @@ namespace legoMiniFigures.Heads
         public override void Talk()
         {
             Console.WriteLine($"Hi, I'm {_name}");
+            base.Talk();
         }
 
         public override void Eat()

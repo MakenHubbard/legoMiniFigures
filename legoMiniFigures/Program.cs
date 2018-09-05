@@ -1,5 +1,6 @@
 ﻿using legoMiniFigures.Heads;
 using legoMiniFigures.Torsos;
+using legoMiniFigures.Legs;
 using System;
 
 namespace legoMiniFigures
@@ -11,11 +12,31 @@ namespace legoMiniFigures
             var head = new NathanHead();
             var reptileBody = new ReptilianTorso();
 ;            reptileBody.Color = "Brown";
+            var babyLegs = new BabyLegs();
+            babyLegs.Length = 19;
+            babyLegs.MainColor = "purple";
+            babyLegs.ShoeColor = "yellow";
 
-            var figure = new MiniFigure(head, reptileBody);
+            var bestTeacher = new MiniFigure("Nathan",head, reptileBody, babyLegs);
 
-            figure.Greet();
-            figure.TakeABreak();
+            bestTeacher.Greet();
+
+            var head2 = new MartinHead();
+            var birdBody = new BirdTorso();
+            ; reptileBody.Color = "pink";
+            var manLegs = new Legs.Legs();
+            manLegs.Length = 10;
+            manLegs.MainColor = "blue";
+            manLegs.ShoeColor = "brown";
+
+            var martin = new MiniFigure("Steve", head2, birdBody, manLegs);
+
+            martin.Greet();
+
+            bestTeacher.Karate(martin);
+
+            bestTeacher.TakeABreak();
+            martin.TakeABreak();
 
             Console.ReadLine();
         }
