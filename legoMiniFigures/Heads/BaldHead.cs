@@ -14,7 +14,7 @@ namespace legoMiniFigures.Heads
             _name = name;
         }
 
-        public override void Talk()
+        public override void Talk(IGreetable greetable)
         {
             Console.WriteLine($"Hi, I'm {_name}");
             base.Talk();

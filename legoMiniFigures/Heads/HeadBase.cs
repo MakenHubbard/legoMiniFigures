@@ -6,9 +6,9 @@ namespace legoMiniFigures.Heads
     {
         public abstract bool HasHair { get; }
 
-        public  virtual void Talk()
+        public  virtual void Talk(IGreetable greetable)
         {
-            Console.WriteLine("Im a talking head");
+            Console.WriteLine($"Im a talking head, {greetable.Name}");
         }
 
         public abstract void Eat();

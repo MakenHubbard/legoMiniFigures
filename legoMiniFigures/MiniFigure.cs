@@ -5,7 +5,7 @@ using System;
 
 namespace legoMiniFigures
 {
-    class MiniFigure
+    class MiniFigure : IGreeter, IGreetable
     {
         private readonly Head _head;
         private readonly Torso _torso;
@@ -33,15 +33,15 @@ namespace legoMiniFigures
             _legs.Kick(target);
         }
 
-        public void DoStuff()
+        public void DoStuff(IGreetable greetable)
         {
-            _head.Talk();
+            _head.Talk(greetable);
             _head.Eat();
         }
 
-        public void Greet()
+        public void Greet(IGreetable greetable)
         {
-            _head.Talk();
+            _head.Talk(greetable);
             _torso.Wave();
 
         }
